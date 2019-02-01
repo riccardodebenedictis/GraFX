@@ -16,8 +16,8 @@ public class Node {
     double width, height;
     double[] location = new double[] { 0, 0 };
     double arc = 3;
-    Color fill = Color.YELLOWGREEN;
-    Color stroke = Color.BROWN;
+    Color fill = Color.LIGHTGRAY;
+    Color stroke = Color.DARKGRAY;
     Color text_stroke = Color.BLACK;
 
     Node(final Graph graph, String text, double x, double y) {

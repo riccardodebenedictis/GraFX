@@ -27,7 +27,7 @@ public class Edge {
         double hh = (to.height + 4) / 2;
         double hw = (to.width + 4) / 2;
 
-        // the intersection points..
+        // the intersection point..
         double x = 0, y = 0;
 
         if (-hh <= hsw && hsw <= hh) {

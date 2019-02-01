@@ -1,6 +1,7 @@
 package it.cnr.istc;
 
 import it.cnr.istc.grafx.Graph;
+import it.cnr.istc.grafx.Node;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -20,5 +21,9 @@ public class App extends Application {
         stage.setTitle("Graph");
         stage.setScene(new Scene(graph));
         stage.show();
+
+        graph.getAnimation().start();
+
+        Node n1 = graph.addNode("Node 1");
     }
 }
