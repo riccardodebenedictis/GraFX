@@ -16,8 +16,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        Graph graph = new Graph();
         stage.setTitle("Graph");
-        stage.setScene(new Scene(new Graph()));
+        stage.setScene(new Scene(graph));
         stage.show();
     }
 }

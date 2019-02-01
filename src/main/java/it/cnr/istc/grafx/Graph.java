@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import javafx.animation.AnimationTimer;
+import javafx.application.Platform;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.canvas.Canvas;
@@ -56,6 +57,18 @@ public class Graph extends Pane {
      */
     public AnimationTimer getAnimation() {
         return animation;
+    }
+
+    public Node addNode(String text) {
+        Node node = new Node(this, text, getWidth() / 2, getHeight() / 2);
+        Platform.runLater(() -> nodes.add(node));
+        return node;
+    }
+
+    public Edge addEdge(Node from, Node to) {
+        Edge edge = new Edge(this, from, to);
+        Platform.runLater(() -> edges.add(edge));
+        return edge;
     }
 
     @Override
